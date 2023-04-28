@@ -2,19 +2,231 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    <title>Surprise</title>
+    <title>Birthday Website</title>
+    <style>
+        /* Style the page header */
+        header {
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header h1 {
+            font-size: 2rem;
+            margin: 0;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav li + li {
+            margin-left: 1rem;
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        /* Style the banner section */
+        #banner {
+            background-color: #ffd6d6;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+        #banner h2 {
+            font-size: 3rem;
+            margin: 0;
+            color: #cc0000;
+            text-shadow: 1px 1px 2px #fff;
+        }
+        #banner p {
+            font-size: 1.2rem;
+            margin: 0;
+            color: #333;
+        }
+
+        /* Style the photo gallery section */
+        #gallery {
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .image-container img {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            margin: 1rem;
+            border-radius: 50%;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .image-container img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Style the birthday message section */
+        #message {
+            background-color: #f2f2f2;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+        #message h2 {
+            font-size: 2rem;
+            margin: 0 0 1rem;
+            color: #333;
+        }
+        #message p {
+            font-size: 1.2rem;
+            margin: 0;
+            color: #666;
+        }
+        #message form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 2rem;
+        }
+        #message form label {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        #message form input,
+        #message form textarea {
+            font-size: 1.2rem;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+        #message form textarea {
+            height: 150px;
+            resize: vertical;
+        }
+        #message form button {
+            font-size: 1.2rem;
+            padding: 0.5rem 1rem;
+            background-color: #cc0000;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+    </style>
 </head>
 <body>
-    <div class="d-flex flex-row justify-content-center">
-    <img src="img/22485.jpg" alt="no photo" class="image">
-    </div>
-    
+    <header>
+        <h1>Birthday Website</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="banner">
+            <h2>Happy Birthday!</h2>
+            <p>Wishing you all the best on your special day.</p>
+        </section>
+        <section id="gallery">
+            <h2>Photo Gallery</h2>
+            <div class="image-container">
+                <img src="image1.jpg" alt="Image 1">
+                <img src="image2.jpg" alt="Image 2">
+                <img src="image3.jpg" alt="Image 3">
+                <img src="image4.jpg" alt="Image 4">
+            </div>
+        </section>
+        <section id="message">
+            <h2>Birthday Message</h2>
+            <p>Write your birthday message here.</p>
+            <form action="#" method="POST">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p> Sallagaa Vundu Bidda </p>
+    </footer>
+    <script>
+        // Add event listeners to the photo gallery images
+        const galleryImages = document.querySelectorAll('#gallery .image-container img');
+        galleryImages.forEach(image => {
+        image.addEventListener('click', () => {
+            // Open the image in a new window/tab
+            window.open(image.src, '_blank');
+        });
+        });
+
+        // Add event listener to the birthday message form
+        const messageForm = document.querySelector('#message form');
+        const messageNameInput = document.querySelector('#message form input[name="name"]');
+        const messageEmailInput = document.querySelector('#message form input[name="email"]');
+        const messageTextarea = document.querySelector('#message form textarea');
+        const messageSubmitButton = document.querySelector('#message form button');
+
+        messageForm.addEventListener('submit', e => {
+        e.preventDefault(); // Prevent the default form submission behavior
+        
+        // Get the form data
+        const name = messageNameInput.value.trim();
+        const email = messageEmailInput.value.trim();
+        const message = messageTextarea.value.trim();
+        
+        // Check if the name and message fields are not empty
+        if (name === '' || message === '') {
+            alert('Please enter your name and message.');
+            return;
+        }
+        
+        // Check if the email address is valid
+        if (email !== '' && !isValidEmail(email)) {
+            alert('Please enter a valid email address.');
+            return;
+        }
+        
+        // Send the message via email (replace this with your own email sending function)
+        sendEmail(name, email, message);
+        
+        // Clear the form inputs
+        messageNameInput.value = '';
+        messageEmailInput.value = '';
+        messageTextarea.value = '';
+        
+        alert('Thank you for your message!');
+        });
+
+        // Helper function to check if an email address is valid
+        function isValidEmail(email) {
+        const emailRegex = /^[\w-.]+@([\w-]+\.)+[\w-]{2,}$/;
+        return emailRegex.test(email);
+        }
+
+        // Helper function to send the message via email (replace this with your own email sending function)
+        function sendEmail(name, email, message) {
+        console.log(`Sending email: Name: ${name}, Email: ${email}, Message: ${message}`);
+        }
+
+    </script>
 </body>
 </html>
