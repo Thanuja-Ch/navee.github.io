@@ -3,6 +3,9 @@
 <head>
 	<title>Birthday Balls Animation</title>
 	<style type="text/css">
+        body {
+            background-color: #dfadadde;
+        }
 		canvas {
 			display: block;
 			margin: 0 auto;
@@ -18,13 +21,13 @@
 			transform: translate(-50%, -50%);
 			font-size: 5rem;
 			font-weight: bold;
-			color: rgb(17, 156, 226);
-			text-shadow: 2px 2px 0px black;
+			color:rgb(2, 3, 3);
+			text-shadow: 2px 2px 0px #ffffff;
 		}
 	</style>
 </head>
 <body>
-	<div id="message">Happy Birthday Ra Bullabbai</div>
+	<div id="message">Happy Birthday Raa Navee</div>
 	<canvas id="canvas"></canvas>
 	<script type="text/javascript">
 		// initialize canvas
@@ -63,7 +66,7 @@
 		
 		// create array of balls
 		var balls = [];
-		for (var i = 0; i < 50; i++) {
+		for (var i = 0; i < 120; i++) {
 			var radius = Math.floor(Math.random() * 50) + 10;
 			var x = Math.random() * (canvas.width - radius * 2) + radius;
 			var y = Math.random() * (canvas.height - radius * 2) + radius;

@@ -42,7 +42,7 @@
 			top: 100%;
 			left: 50%;
 			transform: translate(-50%, -100%);
-			background-color: #F44336;
+			background-color: #ffffff;
 			border-radius: 50% 50% 40% 40%;
 			animation: balloon 4s ease-in-out infinite;
 			z-index: -1;
@@ -57,7 +57,7 @@
 			top: -20px;
 			left: 50%;
 			transform: translateX(-50%);
-			background-color: #F44336;
+			background-color: #ffffff;
 			border-radius: 50%;
 			animation: balloon 3s ease-in-out infinite;
 		}
@@ -181,31 +181,33 @@
 
         .wish p {
             font-size: 1.5rem;
-            color: #680567dc;
+            color: #170117dc;
             text-shadow: 1px 1px #fff;
             margin-bottom: 2rem;
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: 400;
         }
 
+        
         .button {
-            display: block;
-            margin: 2rem auto 0;
-            padding: 1rem 2rem;
-            font-size: 1.5rem;
-            color: #fff;
-            background-color: #F44336;
-            border: none;
-            border-radius: 2rem;
-            box-shadow: 2px 2px 2px rgba(0,0,0,0.1);
+            background-image: linear-gradient(to right, #314755 0%, #26a0da  51%, #314755  100%);
+            margin: 10px;
+            padding: 15px 45px;
             text-align: center;
-            cursor: pointer;
-            animation: pulse 2s ease-in-out infinite;
-            transform-origin: center;
-        }
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;            
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+            display: block;
+          }
 
-        .button:hover {
-            background-color: #d90db4;
-        }
+          .button:hover {
+            background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+          }
     </style>
 </head>
 <body>
